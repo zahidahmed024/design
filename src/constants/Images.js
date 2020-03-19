@@ -1,0 +1,1 @@
+export const run= require('../assets/images/run.jpg')
