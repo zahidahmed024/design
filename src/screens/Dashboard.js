@@ -14,6 +14,8 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import {run} from '../constants/Images';
 import colors from '../constants/Colors';
 import string from '../constants/Strings';
+import TabNav from '../components/TabNav';
+
 const window = Dimensions.get('window');
 export default class Dashboard extends Component {
   constructor(props) {
@@ -85,6 +87,10 @@ export default class Dashboard extends Component {
           </Text>
           <Image style={styles.image} source={run} />
         </View>
+  
+        <TabNav/>      
+
+    
       </View>
     );
   }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Image, StyleSheet, TouchableOpacity, TouchableWithoutFeedback, Animated, Text, Alert } from 'react-native';
 import Dashboard from './src/screens/Dashboard';
-
+import TavNav from './src/components/TabNav';
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -11,8 +11,10 @@ export default class App extends Component {
 
   render() {
     return (
-      <View>
+      <View style={{flex:1}}>
         <Dashboard/>
+        {/* <TavNav/> */}
+        {/* <AsyncData /> */}
       </View>
     );
   }
