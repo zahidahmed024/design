@@ -4,8 +4,8 @@ const en = {
     welcome: 'welcome',
     midHeading: 'RapidTransfer',
     midlower :'INTERNATIONAL' ,
-    moneyLine:' My Money. My Africa', 
-    invite:'Invite Your Friend',
+    moneyLine:' My money. My Africa', 
+    invite:'Invite your friend',
     sortQoute:`Don't let them miss out .invite
 them todey and get rewarded`
 }

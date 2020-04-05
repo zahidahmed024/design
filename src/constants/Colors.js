@@ -7,6 +7,6 @@ export default {
     default: '#000000',
     statusbar: '#a90e52',
 
-    extra1:'#3C9EC8'
+    extra1:'#99CDE4'
 
 };

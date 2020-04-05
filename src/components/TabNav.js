@@ -34,10 +34,10 @@ export default class TabNav extends Component {
                   }}>
                   <View style={{alignSelf: 'center'}}>
                     <Image
-                      source={require('../assets/icons/ic_profile.png')}
+                      source={require('../assets/icons/recipient.png')}
                       style={styles.icon}
                     />
-                    <Text>settings</Text>
+                    <Text>Recipient</Text>
                   </View>
                 </TouchableOpacity>
               </View>
@@ -50,26 +50,26 @@ export default class TabNav extends Component {
                   }}>
                   <View style={{alignSelf: 'center'}}>
                     <Image
-                      source={require('../assets/icons/ic_profile.png')}
+                      source={require('../assets/icons/history.png')}
                       style={styles.icon}
                     />
-                    <Text>2nd</Text>
+                    <Text>History</Text>
                   </View>
                 </TouchableOpacity>
               </View>
-              <View style={{width: 60}}></View>
+              <View style={{width: 70}}></View>
               <View style={styles.icon_container}>
                 <TouchableOpacity
                   underlayColor={'transparent'}
                   onPress={() => {
                     onPress(BOTTOM_NAVIGATE.ACCOUNT);
                   }}>
-                  <View style={{alignSelf: 'center'}}>
+                  <View style={{justifyContent:'center', alignSelf: 'center'}}>
                     <Image
-                      source={require('../assets/icons/ic_profile.png')}
+                      source={require('../assets/icons/profile.png')}
                       style={styles.icon}
                     />
-                    <Text>3rd</Text>
+                    <Text>Profile</Text>
                   </View>
                 </TouchableOpacity>
               </View>
@@ -81,10 +81,10 @@ export default class TabNav extends Component {
                   }}>
                   <View style={{alignSelf: 'center'}}>
                     <Image
-                      source={require('../assets/icons/ic_profile.png')}
+                      source={require('../assets/icons/more.png')}
                       style={styles.icon}
                     />
-                    <Text>settings</Text>
+                    <Text>More</Text>
                   </View>
                 </TouchableOpacity>
               </View>
@@ -98,7 +98,7 @@ export default class TabNav extends Component {
             onPress(BOTTOM_NAVIGATE.SEND_MONEY);
           }}>
           <Image
-            source={require('../assets/icons/ic_send.png')}
+            source={require('../assets/icons/send.png')}
             style={styles.icon_mid}
           />
         </TouchableOpacity>
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     height: 56,
     backgroundColor: '#f5f6f8',
     borderStyle: 'solid',
-    marginVertical: 30, /////////
+    marginVertical: 25, /////////
     justifyContent: 'center',
     width: window.width,
   },

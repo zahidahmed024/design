@@ -10,7 +10,7 @@ import {
   StatusBar,
   Image,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/AntDesign';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {run} from '../constants/Images';
 import colors from '../constants/Colors';
 import string from '../constants/Strings';
@@ -26,12 +26,13 @@ export default class Dashboard extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar backgroundColor="blue" />
+        <StatusBar backgroundColor="#0682BB" />
         <View style={styles.curvedContainer}>
           <View style={styles.round}>
             <View style={styles.curved}>
               <View style={styles.tophead}>
-                <Picker
+                {/* <Picker
+                itemStyle={ {color :'black', fontSize:50}}
                   // selectedValue={this.state.language}
                   style={{height: 50, width: 100, color: 'white'}}
                   // onValueChange={(itemValue, itemIndex) =>
@@ -40,31 +41,40 @@ export default class Dashboard extends Component {
                 >
                   <Picker.Item label="ENG" value="ENG" />
                   <Picker.Item label="BN" value="BN" />
-                </Picker>
+                </Picker> */}
+                <View style={{flexDirection:'row'}}>
+                  <Image style={{width:30,height:20}} source={{uri:'https://images.vexels.com/media/users/3/163965/isolated/preview/5bb2c926d53cc59030477ec3ecb6d26a-england-flag-language-icon-by-vexels.png'}} />
+                  <Text style={{color:'white',paddingLeft:5}}>ENG</Text>
+                  <Icon
+                  style={{color:'white',marginLeft:5,marginTop:-1}}
+                  name="md-arrow-dropdown"
+                   size={25}
+                   />
+                </View>
 
                 <Icon
-                  style={{color: 'white'}}
-                  name="bells"
-                  size={30}
-                  color="#900"
+                  style={{color: 'white',marginTop:-5}}
+                  name="ios-notifications-outline"
+                  size={35}
+                  // color="#900"
                 />
               </View>
 
               <View style={styles.headingContainer}>
-                <Text style={{fontSize: 35, color: 'white'}}>
+                <Text style={{fontSize: 35,fontWeight: "bold",fontFamily:'sans-serif-thin', color: 'white'}}>
                   {string.dashboard.topHeading}
                 </Text>
-                <Text style={{fontSize: 30, color: 'white'}}>
+                <Text style={{fontSize: 30, color: 'white',fontFamily:'sans-serif-thin',}}>
                   {string.dashboard.welcome}
                 </Text>
               </View>
               <View style={styles.imageContainer}>
                 <Image style={styles.image} source={run} />
                 <Text
-                  style={{fontSize: 35, fontStyle: 'italic', color: 'white'}}>
+                  style={{fontSize: 35,fontFamily:'sans-serif-thin', fontStyle: 'italic', color: 'white',fontWeight: "bold"}}>
                   {string.dashboard.midHeading}
                 </Text>
-                <Text style={{fontSize: 15, color: 'white'}}>
+                <Text style={{fontSize: 15, color: 'white',fontStyle:'italic'}}>
                   {string.dashboard.midlower}
                 </Text>
               </View>
@@ -73,22 +83,28 @@ export default class Dashboard extends Component {
         </View>
 
         {/* <View style={{alignItems:'center'}}> */}
-        <Text style={{fontSize: 35, color: colors.extra1}}>
+        <Text style={{fontSize: 25,fontWeight: "bold",fontFamily:'sans-serif-light', color:'#58ACD0',marginTop:40}}>
           {string.dashboard.moneyLine}
         </Text>
         {/* </View>     */}
 
         <View style={styles.box}>
-          <Text style={{color: 'blue', fontSize: 20}}>
-            {string.dashboard.invite} {'\n'}
-            <Text style={{fontSize: 15, color: colors.extra1}}>
-              {string.dashboard.sortQoute}
+          <View style={{alignSelf:'center'}}>
+            <Text style={{color: '#4184A1',lineHeight: 35,fontWeight: "bold",fontFamily:'sans-serif-light', fontSize: 20}}>
+            {string.dashboard.invite} 
             </Text>
-          </Text>
-          <Image style={styles.image} source={run} />
+            <Text style={{fontSize: 15,fontFamily:'Roboto', color: '#43A2CC'}}>
+    {string.dashboard.sortQoute}
+             </Text>
+          </View>
+          
+          <Image style={styles.image2} source={run} />
         </View>
-  
+
+        <View style={{position:'absolute',bottom:0}}>
+
         <TabNav/>      
+        </View>
 
     
       </View>
@@ -105,6 +121,7 @@ const styles = StyleSheet.create({
   tophead: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    padding:20,
   },
   headingContainer: {
     marginTop: 20,
@@ -115,6 +132,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
+    marginBottom:20,
+    width: 80,
+    height: 80,
+    borderColor: 'black',
+    borderWidth: 1,
+    borderRadius: 25,
+  },
+  image2: {
+    marginBottom:20,
     width: 70,
     height: 70,
     borderColor: 'black',
@@ -122,19 +148,20 @@ const styles = StyleSheet.create({
     borderRadius: 25,
   },
   box: {
-    padding: 10,
-    marginTop: 10,
+    padding: 15,
+    marginTop: 40,
     width: window.width - 60,
     flexDirection: 'row',
     justifyContent: 'space-between',
     height: 100,
     backgroundColor: 'white',
+    borderRadius:10,
   },
   curvedContainer: {
     alignSelf: 'center',
     width: window.width,
     overflow: 'hidden',
-    height: window.width / 1,
+    height: window.width / .9,
   },
   round: {
     borderRadius: window.width,
@@ -146,7 +173,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   curved: {
-    height: window.width / 1,
+    height: window.width / .9,
     width: window.width,
     position: 'absolute',
     bottom: 0,
